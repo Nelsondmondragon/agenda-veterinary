@@ -25,4 +25,7 @@ public class Municipio {
     @OneToMany(mappedBy = "municipio")
     private List<Company> companies;
 
+    @OneToMany(mappedBy = "municipio")
+    private List<Vereda> veredas;
+
 }
