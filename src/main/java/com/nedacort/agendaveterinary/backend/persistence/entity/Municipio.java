@@ -3,6 +3,7 @@ package com.nedacort.agendaveterinary.backend.persistence.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -20,4 +21,8 @@ public class Municipio {
     @ManyToOne
     @JoinColumn(name = "fk_departamento", insertable = false, updatable = false)
     private Departamento departamento;
+
+    @OneToMany(mappedBy = "municipio")
+    private List<Company> companies;
+
 }

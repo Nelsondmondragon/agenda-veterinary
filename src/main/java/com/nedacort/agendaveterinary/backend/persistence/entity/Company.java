@@ -25,6 +25,7 @@ public class Company {
     private String logo;
     private String email;
 
-    @Column(name = "fk_municipio")
+    @ManyToOne
+    @JoinColumn(name = "fk_municipio", insertable = false, updatable = false)
     private Municipio municipio;
 }
