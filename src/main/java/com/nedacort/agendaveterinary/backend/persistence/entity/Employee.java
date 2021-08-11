@@ -29,4 +29,7 @@ public class Employee {
 
     @OneToMany(mappedBy = "employee")
     private List<EmployeePositionEmployee> employeePositionEmployees;
+
+    @OneToMany(mappedBy = "employee")
+    private List<User> users;
 }

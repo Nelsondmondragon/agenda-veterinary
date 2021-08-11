@@ -3,6 +3,7 @@ package com.nedacort.agendaveterinary.backend.persistence.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -26,12 +27,18 @@ public class User {
     @Column(name = "estado_sesion")
     private Boolean sessionActive;
 
-    @Column(name = "fk_empresa")
+    @ManyToOne
+    @JoinColumn(name = "fk_empresa")
     private Integer company;
 
-    @Column(name = "fk_usuario")
+    @ManyToOne
+    @JoinColumn(name = "fk_usuario")
     private User user;
 
-    @Column(name = "fk_empleado")
+    @ManyToOne
+    @JoinColumn(name = "fk_empleado")
     private Employee employee;
+
+    @OneToMany(mappedBy = "user")
+    private List<User> users;
 }
