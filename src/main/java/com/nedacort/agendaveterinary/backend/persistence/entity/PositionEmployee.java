@@ -3,6 +3,7 @@ package com.nedacort.agendaveterinary.backend.persistence.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -16,4 +17,6 @@ public class PositionEmployee {
     @Column(name = "cargo_empleado")
     private String namePosition;
 
+    @OneToMany(mappedBy = "positionEmployee")
+    private List<EmployeePositionEmployee> employeePositionEmployees;
 }
