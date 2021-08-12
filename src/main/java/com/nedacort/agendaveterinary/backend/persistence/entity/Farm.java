@@ -3,6 +3,7 @@ package com.nedacort.agendaveterinary.backend.persistence.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -29,4 +30,6 @@ public class Farm {
     @JoinColumn(name = "fk_vereda")
     private Vereda vereda;
 
+    @OneToMany(mappedBy = "farm")
+    private List<Visit> visits;
 }

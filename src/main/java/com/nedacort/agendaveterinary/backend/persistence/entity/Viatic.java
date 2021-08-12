@@ -4,6 +4,7 @@ import com.helger.commons.annotation.IsLocked;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -29,4 +30,7 @@ public class Viatic {
 
     @Column(name = "costo_total")
     private Double costTotal;
+
+    @OneToMany(mappedBy = "viatic")
+    private List<Visit> visits;
 }
