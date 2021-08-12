@@ -36,4 +36,7 @@ public class Visit {
 
     @OneToMany(mappedBy = "visit")
     private List<PhotographicEvidence> photographicEvidences;
+
+    @OneToMany(mappedBy = "visit")
+    private List<Invoice> invoices;
 }
