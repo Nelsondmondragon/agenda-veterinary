@@ -31,4 +31,7 @@ public class Product {
 
     @OneToMany(mappedBy = "product")
     private List<PresentationProduct> presentationProducts;
+
+    @OneToMany(mappedBy = "product")
+    private List<InvoiceProduct> invoiceProducts;
 }

@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Entity
@@ -24,4 +25,7 @@ public class Invoice {
     @ManyToOne
     @JoinColumn(name = "fk_visita")
     private Visit visit;
+
+    @OneToMany(mappedBy = "invoice")
+    private List<InvoiceProduct> invoiceProducts;
 }
