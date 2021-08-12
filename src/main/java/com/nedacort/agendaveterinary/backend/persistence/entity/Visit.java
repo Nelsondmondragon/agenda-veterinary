@@ -33,4 +33,7 @@ public class Visit {
 
     @OneToMany(mappedBy = "visit")
     private List<VisitProcedureLotEarned> visitProcedureLotEarneds;
+
+    @OneToMany(mappedBy = "visit")
+    private List<PhotographicEvidence> photographicEvidences;
 }
