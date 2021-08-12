@@ -5,6 +5,7 @@ import org.apache.tomcat.jni.Local;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Entity
@@ -29,4 +30,7 @@ public class Visit {
     @ManyToOne
     @JoinColumn(name = "fk_finca")
     private Farm farm;
+
+    @OneToMany(mappedBy = "visit")
+    private List<VisitProcedureLotEarned> visitProcedureLotEarneds;
 }

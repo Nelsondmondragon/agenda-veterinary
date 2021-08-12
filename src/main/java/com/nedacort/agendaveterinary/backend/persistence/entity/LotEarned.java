@@ -3,6 +3,7 @@ package com.nedacort.agendaveterinary.backend.persistence.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -19,4 +20,8 @@ public class LotEarned {
 
     @Column(name = "tipo_lote")
     private String typeLot;
+
+    @OneToMany(mappedBy = "lotEarned")
+    private List<VisitProcedureLotEarned> visitProcedureLotEarneds;
+
 }

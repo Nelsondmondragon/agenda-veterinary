@@ -4,11 +4,12 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Entity
 @Table(name = "procedimiento")
-public class Procedures {
+public class Procedure {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,4 +21,7 @@ public class Procedures {
 
     @Column(name = "periodo_procedimiento")
     private LocalDateTime periodProcedures;
+
+    @OneToMany(mappedBy = "procedure")
+    private List<VisitProcedureLotEarned> visitProcedureLotEarneds;
 }
