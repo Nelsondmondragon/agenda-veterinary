@@ -3,6 +3,7 @@ package com.nedacort.agendaveterinary.backend.persistence.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -27,4 +28,7 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "fk_proveedor")
     private Provider provider;
+
+    @OneToMany(mappedBy = "product")
+    private List<PresentationProduct> presentationProducts;
 }
