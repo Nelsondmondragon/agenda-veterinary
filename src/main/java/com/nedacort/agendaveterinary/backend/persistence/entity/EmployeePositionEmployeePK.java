@@ -10,10 +10,12 @@ import java.io.Serializable;
 @Embeddable
 public class EmployeePositionEmployeePK implements Serializable {
 
+
     @Column(name = "id_cargo_empleado")
     private Integer idPositionEmployee;
 
     @Column(name = "id_empleado")
     private Integer idEmployee;
+
 
 }

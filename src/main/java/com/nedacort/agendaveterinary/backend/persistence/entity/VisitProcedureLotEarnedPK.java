@@ -4,10 +4,11 @@ import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import java.io.Serializable;
 
 @Data
 @Embeddable
-public class VisitProcedureLotEarnedPK {
+public class VisitProcedureLotEarnedPK implements Serializable {
 
     @Column(name = "id_visita_procedimiento_lote")
     private Integer idVisitProcedureLotEarned;

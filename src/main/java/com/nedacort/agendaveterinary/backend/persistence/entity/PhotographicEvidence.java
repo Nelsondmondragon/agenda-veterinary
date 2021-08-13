@@ -18,6 +18,6 @@ public class PhotographicEvidence {
     private byte[] photo;
 
     @ManyToOne
-    @JoinColumn(name = "fk_visita")
+    @JoinColumn(name = "fk_visita",insertable = false, updatable = false)
     private Visit visit;
 }

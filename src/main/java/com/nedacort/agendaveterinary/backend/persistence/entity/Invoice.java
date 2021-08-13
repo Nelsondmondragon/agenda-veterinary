@@ -23,7 +23,7 @@ public class Invoice {
     private Double priceTotal;
 
     @ManyToOne
-    @JoinColumn(name = "fk_visita")
+    @JoinColumn(name = "fk_visita",insertable = false, updatable = false)
     private Visit visit;
 
     @OneToMany(mappedBy = "invoice")

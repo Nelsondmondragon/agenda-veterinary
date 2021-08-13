@@ -16,14 +16,14 @@ public class VisitProcedureLotEarned {
     private String observation;
 
     @ManyToOne
-    @JoinColumn(name = "fk_lote")
+    @JoinColumn(name = "fk_lote",insertable = false, updatable = false)
     private LotEarned lotEarned;
 
     @ManyToOne
-    @JoinColumn(name = "fk_visita")
+    @JoinColumn(name = "fk_visita",insertable = false, updatable = false)
     private Visit visit;
 
     @ManyToOne
-    @JoinColumn(name = "fk_procedimiento")
+    @JoinColumn(name = "fk_procedimiento",insertable = false, updatable = false)
     private Procedure procedure;
 }

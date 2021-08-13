@@ -23,7 +23,7 @@ public class Company {
     @Column(name = "telefono")
     private String numberPhone;
 
-    private String logo;
+    private byte[] logo;
     private String email;
 
     @ManyToOne

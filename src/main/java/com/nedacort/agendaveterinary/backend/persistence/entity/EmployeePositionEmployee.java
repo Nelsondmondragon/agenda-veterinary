@@ -17,11 +17,11 @@ public class EmployeePositionEmployee {
 
 
     @ManyToOne
-    @JoinColumn(name = "id_cargo_empleado")
+    @JoinColumn(name = "id_cargo_empleado", insertable = false, updatable = false)
     private PositionEmployee positionEmployee;
 
     @ManyToOne
-    @JoinColumn(name = "id_empleado")
+    @JoinColumn(name = "id_empleado",insertable = false, updatable = false)
     private Employee employee;
 
 }

@@ -17,11 +17,11 @@ public class PresentationProduct {
     private Integer stock;
 
     @ManyToOne
-    @JoinColumn(name = "fk_presentacion")
+    @JoinColumn(name = "fk_presentacion",insertable = false, updatable = false)
     private Presentation presentation;
 
     @ManyToOne
-    @JoinColumn(name = "fk_producto")
+    @JoinColumn(name = "fk_producto",insertable = false, updatable = false)
     private Product product;
 
 }

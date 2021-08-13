@@ -15,13 +15,13 @@ public class Employee {
     private Integer id;
 
     @Column(name = "contrato_empleado")
-    private String contract;
+    private byte[] contract;
 
     @Column(name = "estado_empleado")
     private Boolean active;
 
     @Column(name = "tarjeta_profesional")
-    private String professionalCard;
+    private byte[] professionalCard;
 
     @ManyToOne
     @JoinColumn(name = "fk_cargo_empleado", insertable = false, updatable = false)

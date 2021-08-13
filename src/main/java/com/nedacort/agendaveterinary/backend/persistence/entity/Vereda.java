@@ -19,7 +19,7 @@ public class Vereda {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "fk_municipio")
+    @JoinColumn(name = "fk_municipio",insertable = false, updatable = false)
     private Municipio municipio;
 
     @OneToMany(mappedBy = "vereda")

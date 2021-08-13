@@ -26,7 +26,7 @@ public class Product {
     private Mark mark;
 
     @ManyToOne
-    @JoinColumn(name = "fk_proveedor")
+    @JoinColumn(name = "fk_proveedor",insertable = false, updatable = false)
     private Provider provider;
 
     @OneToMany(mappedBy = "product")

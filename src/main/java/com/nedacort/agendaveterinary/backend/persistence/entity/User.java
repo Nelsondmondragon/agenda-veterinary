@@ -28,15 +28,15 @@ public class User {
     private Boolean sessionActive;
 
     @ManyToOne
-    @JoinColumn(name = "fk_empresa")
-    private Integer company;
+    @JoinColumn(name = "fk_empresa",insertable = false, updatable = false)
+    private Company company;
 
     @ManyToOne
-    @JoinColumn(name = "fk_usuario")
+    @JoinColumn(name = "fk_usuario",insertable = false, updatable = false)
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "fk_empleado")
+    @JoinColumn(name = "fk_empleado",insertable = false, updatable = false)
     private Employee employee;
 
     @OneToMany(mappedBy = "user")

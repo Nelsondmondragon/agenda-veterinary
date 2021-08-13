@@ -23,11 +23,11 @@ public class Farm {
 
 
     @ManyToOne
-    @JoinColumn(name = "fk_cliente")
+    @JoinColumn(name = "fk_cliente",insertable = false, updatable = false)
     private Client client;
 
     @ManyToOne
-    @JoinColumn(name = "fk_vereda")
+    @JoinColumn(name = "fk_vereda",insertable = false, updatable = false)
     private Vereda vereda;
 
     @OneToMany(mappedBy = "farm")

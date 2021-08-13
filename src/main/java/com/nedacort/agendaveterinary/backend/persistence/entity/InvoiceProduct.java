@@ -21,10 +21,10 @@ public class InvoiceProduct {
     private Double priceUnitary;
 
     @ManyToOne
-    @JoinColumn(name = "fk_producto")
+    @JoinColumn(name = "fk_producto",insertable = false, updatable = false)
     private Product product;
 
     @ManyToOne
-    @JoinColumn(name = "fk_factura")
+    @JoinColumn(name = "fk_factura",insertable = false, updatable = false)
     private Invoice invoice;
 }
