@@ -14,14 +14,20 @@ public class PresentationProduct {
     @Column(name = "id_presentacion_producto")
     private Integer id;
 
+    @Column(name = "fk_presentacion")
+    private Integer idPresentation;
+
+    @Column(name = "fk_producto")
+    private Integer idProduct;
+
     private Integer stock;
 
     @ManyToOne
-    @JoinColumn(name = "fk_presentacion",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_presentacion", insertable = false, updatable = false)
     private Presentation presentation;
 
     @ManyToOne
-    @JoinColumn(name = "fk_producto",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_producto", insertable = false, updatable = false)
     private Product product;
 
 }

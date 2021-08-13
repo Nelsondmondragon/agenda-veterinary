@@ -22,8 +22,11 @@ public class Invoice {
     @Column(name = "precio_total")
     private Double priceTotal;
 
+    @Column(name = "fk_visita")
+    private Integer idVisit;
+
     @ManyToOne
-    @JoinColumn(name = "fk_visita",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_visita", insertable = false, updatable = false)
     private Visit visit;
 
     @OneToMany(mappedBy = "invoice")

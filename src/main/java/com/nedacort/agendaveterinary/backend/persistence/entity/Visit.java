@@ -23,12 +23,18 @@ public class Visit {
     @Column(name = "fecha_nueva_visita")
     private LocalDateTime newDateVisit;
 
+    @Column(name = "fk_viatico")
+    private Integer idViatic;
+
+    @Column(name = "fk_finca")
+    private Integer idFarm;
+
     @ManyToOne
-    @JoinColumn(name = "fk_viatico")
+    @JoinColumn(name = "fk_viatico",insertable = false, updatable = false)
     private Viatic viatic;
 
     @ManyToOne
-    @JoinColumn(name = "fk_finca")
+    @JoinColumn(name = "fk_finca",insertable = false, updatable = false)
     private Farm farm;
 
     @OneToMany(mappedBy = "visit")

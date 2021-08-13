@@ -18,8 +18,11 @@ public class Vereda {
     @Column(name = "nombre_vereda")
     private String name;
 
+    @Column(name = "fk_municipio")
+    private Integer idMunicipio;
+
     @ManyToOne
-    @JoinColumn(name = "fk_municipio",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_municipio", insertable = false, updatable = false)
     private Municipio municipio;
 
     @OneToMany(mappedBy = "vereda")

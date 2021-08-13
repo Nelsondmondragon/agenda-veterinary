@@ -21,12 +21,18 @@ public class Product {
     @Column(name = "stock")
     private Integer stock;
 
+    @Column(name = "fk_marca")
+    private Integer idMark;
+
+    @Column(name = "fk_proveedor")
+    private Integer idProvider;
+
     @ManyToOne
-    @JoinColumn(name = "fk_marca")
+    @JoinColumn(name = "fk_marca", insertable = false, updatable = false)
     private Mark mark;
 
     @ManyToOne
-    @JoinColumn(name = "fk_proveedor",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_proveedor", insertable = false, updatable = false)
     private Provider provider;
 
     @OneToMany(mappedBy = "product")

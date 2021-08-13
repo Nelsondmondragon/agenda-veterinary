@@ -21,13 +21,18 @@ public class Farm {
     @Column(name = "infomacion_extra")
     private String informationExtra;
 
+    @Column(name = "fk_cliente")
+    private Integer idClient;
+
+    @Column(name = "fk_vereda")
+    private Integer idVereda;
 
     @ManyToOne
-    @JoinColumn(name = "fk_cliente",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_cliente", insertable = false, updatable = false)
     private Client client;
 
     @ManyToOne
-    @JoinColumn(name = "fk_vereda",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_vereda", insertable = false, updatable = false)
     private Vereda vereda;
 
     @OneToMany(mappedBy = "farm")

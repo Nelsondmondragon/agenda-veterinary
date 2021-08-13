@@ -18,6 +18,9 @@ public class Municipio {
     @Column(name = "nombre_municipio")
     private String name;
 
+    @Column(name = "fk_departamento")
+    private Integer idDepartamento;
+
     @ManyToOne
     @JoinColumn(name = "fk_departamento", insertable = false, updatable = false)
     private Departamento departamento;

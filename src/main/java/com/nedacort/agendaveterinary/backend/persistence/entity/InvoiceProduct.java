@@ -20,11 +20,17 @@ public class InvoiceProduct {
     @Column(name = "precio_unitario")
     private Double priceUnitary;
 
+    @Column(name = "fk_producto")
+    private Integer idProduct;
+
+    @Column(name = "fk_factura")
+    private Integer idInvoice;
+
     @ManyToOne
-    @JoinColumn(name = "fk_producto",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_producto", insertable = false, updatable = false)
     private Product product;
 
     @ManyToOne
-    @JoinColumn(name = "fk_factura",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_factura", insertable = false, updatable = false)
     private Invoice invoice;
 }

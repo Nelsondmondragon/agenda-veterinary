@@ -27,16 +27,25 @@ public class User {
     @Column(name = "estado_sesion")
     private Boolean sessionActive;
 
+    @Column(name = "fk_empresa")
+    private Integer idCompany;
+
+    @Column(name = "fk_usuario")
+    private Integer idUser;
+
+    @Column(name = "fk_empleado")
+    private Integer idEmployee;
+
     @ManyToOne
-    @JoinColumn(name = "fk_empresa",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_empresa", insertable = false, updatable = false)
     private Company company;
 
     @ManyToOne
-    @JoinColumn(name = "fk_usuario",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_usuario", insertable = false, updatable = false)
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "fk_empleado",insertable = false, updatable = false)
+    @JoinColumn(name = "fk_empleado", insertable = false, updatable = false)
     private Employee employee;
 
     @OneToMany(mappedBy = "user")
