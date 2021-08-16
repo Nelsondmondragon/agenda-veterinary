@@ -9,12 +9,7 @@ import java.util.List;
 public class DVereda {
 
     private Integer id;
-
     private String name;
-
     private Integer idMunicipio;
-
     private Municipio municipio;
-
-    private List<DFarm> DFarms;
 }

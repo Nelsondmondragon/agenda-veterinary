@@ -8,16 +8,9 @@ import java.util.List;
 public class DViatic {
 
     private Integer id;
-
     private Double RemainingMoney;
-
     private Double costFreight;
-
     private Double costGasoline;
-
     private Double costExtra;
-
     private Double costTotal;
-
-    private List<DVisit> DVisits;
 }

@@ -8,8 +8,5 @@ import java.util.List;
 public class DProvider {
 
     private Integer id;
-
     private String name;
-
-    private List<DProduct> DProducts;
 }

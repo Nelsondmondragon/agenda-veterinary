@@ -14,6 +14,5 @@ public class DCompany {
     private byte[] logo;
     private String email;
     private Integer idMunicipio;
-    private Municipio municipio;
-    private List<DUser> DUsers;
+    private Municipio municipio;c
 }

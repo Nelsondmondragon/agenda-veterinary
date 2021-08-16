@@ -10,10 +10,7 @@ import java.io.Serializable;
 public class DVisitProcedureLotEarnedPK implements Serializable {
 
     private Integer idVisitProcedureLotEarned;
-
     private Integer idLot;
-
     private Integer idVisit;
-
     private Integer idProcedure;
 }

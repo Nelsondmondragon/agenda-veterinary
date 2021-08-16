@@ -9,10 +9,6 @@ import java.util.List;
 public class DProcedure {
 
     private Integer id;
-
     private String name;
-
     private LocalDateTime periodProcedures;
-
-    private List<DVisitProcedureLotEarned> DVisitProcedureLotEarneds;
 }

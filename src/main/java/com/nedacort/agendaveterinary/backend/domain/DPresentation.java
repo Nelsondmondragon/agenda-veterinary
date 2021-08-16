@@ -8,8 +8,7 @@ import java.util.List;
 public class DPresentation {
 
     private Integer id;
-
     private String sizePresentation;
 
-    private List<DPresentationProduct> DPresentationProducts;
+
 }

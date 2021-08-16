@@ -14,6 +14,4 @@ public class DClient {
 
     private Boolean active;
 
-    @OneToMany(mappedBy = "client")
-    private List<Farm> farms;
 }

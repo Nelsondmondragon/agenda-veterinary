@@ -7,8 +7,5 @@ import java.util.List;
 @Data
 public class DPositionEmployee {
     private Integer id;
-
     private String namePosition;
-
-    private List<DEmployeePositionEmployee> DEmployeePositionEmployees;
 }

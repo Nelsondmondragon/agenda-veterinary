@@ -12,8 +12,6 @@ public class DEmployeePositionEmployeePK implements Serializable {
 
 
     private Integer idPositionEmployee;
-
-
     private Integer idEmployee;
 
 

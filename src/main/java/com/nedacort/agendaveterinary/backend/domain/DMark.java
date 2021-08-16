@@ -11,5 +11,4 @@ public class DMark {
 
     private String name;
 
-    private List<DProduct> DProducts;
 }

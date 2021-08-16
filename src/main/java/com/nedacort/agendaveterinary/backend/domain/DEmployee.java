@@ -17,7 +17,4 @@ public class DEmployee {
 
     private DPositionEmployee DPositionEmployee;
 
-    private List<DEmployeePositionEmployee> DEmployeePositionEmployees;
-
-    private List<DUser> DUsers;
 }
