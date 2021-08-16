@@ -13,10 +13,10 @@ public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_empresa")
-    private Long idCompany;
+    private Long id;
 
     @Column(name = "razon_social")
-    private String companyName;
+    private String name;
 
     private String nit;
 
