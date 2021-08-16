@@ -25,12 +25,12 @@ public class MunicipioRepository implements RepositoryDMunicipio {
     }
 
     @Override
-    public Optional<List<DMunicipio>> getByIdDepartamento(Integer id) {
+    public Optional<List<DMunicipio>> getByIdDDepartamento(Integer id) {
         return Optional.of(mapperMunicipio.toDMunicipios(municipioCrudRepository.findByIdDepartamentoOrderByNameAsc(id)));
     }
 
     @Override
-    public Optional<DMunicipio> getMunicipio(Integer id) {
+    public Optional<DMunicipio> getByIdDMunicipio(Integer id) {
         return municipioCrudRepository.findById(id).map(municipio -> mapperMunicipio.toDMunicipio(municipio));
     }
 
